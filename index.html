@@ -32,41 +32,48 @@
 </header>
 
 <main>
-<!-- HERO: full-width split -->
-<section id="home" class="w-full">
-  <div class="hero-g grid lg:grid-cols-2 w-full">
-    <div class="hero-l flex items-center px-6 md:px-12 py-10 lg:py-16" style="background:radial-gradient(800px 420px at 0% 0%,rgba(197,160,89,.22),transparent),var(--bg)">
-      <div class="hero-in max-w-2xl">
-        <span class="inline-block text-sm font-bold px-4 py-1.5 rounded-full" style="background:linear-gradient(135deg,#B8860B,#C5A059);color:#141821">🔥 HOT PRE-LAUNCH PROJECT</span>
-        <h1 class="fd text-4xl md:text-5xl xl:text-6xl font-bold leading-[1.1] mt-5">Godrej DMIC – Smart Township, Greater Noida</h1>
-        <p class="text-lg mt-5">1, 2 &amp; 3 BHK Luxury Smart Homes in DMIC Belt near Upcoming Jewar International Airport &amp; Yamuna Expressway.</p>
-        <div class="flex flex-wrap gap-2.5 mt-6">
-          <span class="pill">Starting @ ₹1.35 Cr*</span><span class="pill" style="border-color:var(--gold);color:#8A6508">Pre-Launch Offer Starting @ ₹1.08 Cr*</span><span class="pill">EOI Amount ₹2 Lacs</span>
+<!-- FIRST SCREEN WRAPPER: Fits Hero + Search Filter + Moving Ticker on initial screen -->
+<div class="first-screen">
+  <!-- HERO: full-width split -->
+  <section id="home" class="hero-wrap w-full">
+    <div class="hero-g grid lg:grid-cols-2 w-full">
+      <div class="hero-l flex items-center px-6 md:px-12 py-8 lg:py-6" style="background:radial-gradient(800px 420px at 0% 0%,rgba(197,160,89,.22),transparent),var(--bg)">
+        <div class="hero-in max-w-2xl">
+          <span class="inline-block text-xs font-bold px-3.5 py-1 rounded-full" style="background:linear-gradient(135deg,#B8860B,#C5A059);color:#141821">🔥 HOT PRE-LAUNCH PROJECT</span>
+          <h1 class="fd text-3xl md:text-4xl xl:text-5xl font-bold leading-[1.1] mt-3">Godrej DMIC – Smart Township, Greater Noida</h1>
+          <p class="text-base mt-3">1, 2 &amp; 3 BHK Luxury Smart Homes in DMIC Belt near Upcoming Jewar International Airport &amp; Yamuna Expressway.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="pill">Starting @ ₹1.35 Cr*</span><span class="pill" style="border-color:var(--gold);color:#8A6508">Pre-Launch Offer Starting @ ₹1.08 Cr*</span><span class="pill">EOI Amount ₹2 Lacs</span>
+          </div>
+          <div class="grid sm:flex gap-3 mt-5">
+            <button class="btn" data-act="lead" data-id="1" data-mode="visit" data-src="Hero: Book Pre-Launch Site Visit">Book Pre-Launch Site Visit</button>
+            <button class="btn2" data-act="lead" data-id="1" data-mode="brochure" data-src="Hero: Download Brochure">Download Brochure</button>
+          </div>
+          <p class="text-xs mt-3">*Prices are indicative and subject to change. Images are representative; actual project may vary. RERA details on request.</p>
         </div>
-        <div class="grid sm:flex gap-3 mt-8">
-          <button class="btn" data-act="lead" data-id="1" data-mode="visit" data-src="Hero: Book Pre-Launch Site Visit">Book Pre-Launch Site Visit</button>
-          <button class="btn2" data-act="lead" data-id="1" data-mode="brochure" data-src="Hero: Download Brochure">Download Brochure</button>
-        </div>
-        <p class="text-xs mt-5">*Prices are indicative and subject to change. Images are representative; actual project may vary. RERA details on request.</p>
+      </div>
+      <div id="hs" class="sl h-[320px] sm:h-[420px] lg:h-full" aria-roledescription="carousel" aria-label="Godrej DMIC gallery">
+        <div class="absolute top-3 right-3 z-[4] rounded-xl px-3.5 py-2 text-xs sm:text-sm font-semibold max-w-[75%]" style="background:rgba(255,255,255,.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.7);color:#141821;box-shadow:0 10px 30px -10px rgba(0,0,0,.35)">📍 15 Mins from Jewar International Airport</div>
+        <div id="hcap" class="absolute left-4 bottom-8 z-[4] px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold" style="background:rgba(20,24,33,.72);color:#fff;backdrop-filter:blur(6px)"></div>
       </div>
     </div>
-    <div id="hs" class="sl h-[340px] sm:h-[460px] lg:h-auto lg:min-h-[640px]" aria-roledescription="carousel" aria-label="Godrej DMIC gallery">
-      <div class="absolute top-4 right-4 z-[4] rounded-xl px-4 py-3 text-sm font-semibold max-w-[75%]" style="background:rgba(255,255,255,.74);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.7);color:#141821;box-shadow:0 10px 30px -10px rgba(0,0,0,.35)">📍 15 Mins from Jewar International Airport</div>
-      <div id="hcap" class="absolute left-4 bottom-10 z-[4] px-3.5 py-1.5 rounded-full text-sm font-semibold" style="background:rgba(20,24,33,.72);color:#fff;backdrop-filter:blur(6px)"></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="w-full max-w-[1560px] mx-auto px-6 md:px-12 lg:px-20 mt-8 relative z-10">
-  <form id="sf" class="card p-3 grid grid-cols-2 lg:grid-cols-5 gap-3 shadow-2xl" style="box-shadow:0 24px 50px -22px rgba(80,60,10,.4)">
-    <div><label class="l" for="fLoc">Location</label><select class="inp" id="fLoc"></select></div>
-    <div><label class="l" for="fDev">Developer</label><select class="inp" id="fDev"></select></div>
-    <div><label class="l" for="fBud">Budget</label><select class="inp" id="fBud"></select></div>
-    <div><label class="l" for="fUnit">Property / unit type</label><select class="inp" id="fUnit"></select></div>
-    <div class="col-span-2 lg:col-span-1 flex items-end"><button class="btn w-full" type="submit">Search Projects</button></div>
-  </form>
-</section>
-<section class="mt-8" style="background:#141821" aria-label="Location and investment highlights"><div class="mq py-3.5"><div class="mq-t"><div><span>✈️ 15 Mins to Noida International Airport (Jewar)</span><span class="d">◆</span><span>🛣️ Direct Connectivity to Yamuna &amp; Noida Expressway</span><span class="d">◆</span><span>📈 High Capital Appreciation in DMIC Smart Industrial Corridor</span><span class="d">◆</span><span>🏆 Zero Brokerage &amp; Exclusive Pre-Launch EOI Allotment</span><span class="d">◆</span><span>✈️ 15 Mins to Noida International Airport (Jewar)</span><span class="d">◆</span><span>🛣️ Direct Connectivity to Yamuna &amp; Noida Expressway</span><span class="d">◆</span><span>📈 High Capital Appreciation in DMIC Smart Industrial Corridor</span><span class="d">◆</span><span>🏆 Zero Brokerage &amp; Exclusive Pre-Launch EOI Allotment</span><span class="d">◆</span></div><div aria-hidden="true"><span>✈️ 15 Mins to Noida International Airport (Jewar)</span><span class="d">◆</span><span>🛣️ Direct Connectivity to Yamuna &amp; Noida Expressway</span><span class="d">◆</span><span>📈 High Capital Appreciation in DMIC Smart Industrial Corridor</span><span class="d">◆</span><span>🏆 Zero Brokerage &amp; Exclusive Pre-Launch EOI Allotment</span><span class="d">◆</span><span>✈️ 15 Mins to Noida International Airport (Jewar)</span><span class="d">◆</span><span>🛣️ Direct Connectivity to Yamuna &amp; Noida Expressway</span><span class="d">◆</span><span>📈 High Capital Appreciation in DMIC Smart Industrial Corridor</span><span class="d">◆</span><span>🏆 Zero Brokerage &amp; Exclusive Pre-Launch EOI Allotment</span><span class="d">◆</span></div></div></div></section>
+  <!-- FILTER BAR -->
+  <section class="w-full max-w-[1380px] mx-auto px-6 md:px-12 lg:px-16 my-3 relative z-10 flex-shrink-0">
+    <form id="sf" class="card px-4 py-2.5 grid grid-cols-2 lg:grid-cols-5 gap-3 shadow-2xl" style="box-shadow:0 20px 44px -20px rgba(80,60,10,.38)">
+      <div><label class="l" for="fLoc">Location</label><select class="inp" id="fLoc"></select></div>
+      <div><label class="l" for="fDev">Developer</label><select class="inp" id="fDev"></select></div>
+      <div><label class="l" for="fBud">Budget</label><select class="inp" id="fBud"></select></div>
+      <div><label class="l" for="fUnit">Property / unit type</label><select class="inp" id="fUnit"></select></div>
+      <div class="col-span-2 lg:col-span-1 flex items-end"><button class="btn w-full !py-2.5" type="submit">Search Projects</button></div>
+    </form>
+  </section>
+
+  <!-- MOVING HEADING / MARQUEE -->
+  <section class="flex-shrink-0" style="background:#141821" aria-label="Location and investment highlights"><div class="mq py-2.5"><div class="mq-t"><div><span>✈️ 15 Mins to Noida International Airport (Jewar)</span><span class="d">◆</span><span>🛣️ Direct Connectivity to Yamuna &amp; Noida Expressway</span><span class="d">◆</span><span>📈 High Capital Appreciation in DMIC Smart Industrial Corridor</span><span class="d">◆</span><span>🏆 Zero Brokerage &amp; Exclusive Pre-Launch EOI Allotment</span><span class="d">◆</span><span>✈️ 15 Mins to Noida International Airport (Jewar)</span><span class="d">◆</span><span>🛣️ Direct Connectivity to Yamuna &amp; Noida Expressway</span><span class="d">◆</span><span>📈 High Capital Appreciation in DMIC Smart Industrial Corridor</span><span class="d">◆</span><span>🏆 Zero Brokerage &amp; Exclusive Pre-Launch EOI Allotment</span><span class="d">◆</span></div><div aria-hidden="true"><span>✈️ 15 Mins to Noida International Airport (Jewar)</span><span class="d">◆</span><span>🛣️ Direct Connectivity to Yamuna &amp; Noida Expressway</span><span class="d">◆</span><span>📈 High Capital Appreciation in DMIC Smart Industrial Corridor</span><span class="d">◆</span><span>🏆 Zero Brokerage &amp; Exclusive Pre-Launch EOI Allotment</span><span class="d">◆</span><span>✈️ 15 Mins to Noida International Airport (Jewar)</span><span class="d">◆</span><span>🛣️ Direct Connectivity to Yamuna &amp; Noida Expressway</span><span class="d">◆</span><span>📈 High Capital Appreciation in DMIC Smart Industrial Corridor</span><span class="d">◆</span><span>🏆 Zero Brokerage &amp; Exclusive Pre-Launch EOI Allotment</span><span class="d">◆</span></div></div></div></section>
+</div>
+
 <section id="projects"><div class="w-full max-w-[1560px] mx-auto px-6 md:px-12 lg:px-20 py-14 md:py-20">
   <h2 class="fd text-3xl md:text-4xl font-bold">Featured &amp; pre-launch projects</h2>
   <div class="flex justify-between items-center mt-2 mb-5 text-sm mu"><span id="count"></span><button class="gold underline" id="reset">Clear filters</button></div>
@@ -100,8 +107,8 @@
   <div class="w-full max-w-[1560px] mx-auto px-6 md:px-12 lg:px-20 py-10 grid md:grid-cols-3 gap-8">
     <div>
       <p class="fd text-2xl font-bold gold">Estates Artha</p>
-      <p class="mu mt-2 text-sm">Tower B, Sector 62, Noida, Uttar Pradesh 201309</p>
-      <p class="mt-3 text-sm">Call: <a class="gold" href="tel:+919999999999">+91 99999 99999</a><br>Email: <a class="gold" href="mailto:hello@estatesartha.in">hello@estatesartha.in</a></p>
+      <p class="mu mt-2 text-sm">Tower B, Noida, Uttar Pradesh 201309</p>
+      <p class="mt-3 text-sm">Call: <a class="gold" href="tel:+917982140486">+91 79821 40486</a><br>Email: <a class="gold" href="mailto:estatesartha@gmail.com">hello@estatesartha.in</a></p>
       <p class="mt-4 text-sm mu space-x-3"><a href="#home">Home</a><a href="#projects">Projects</a><a href="#about">About Us</a><a href="#blog">Blog</a></p>
     </div>
     <div class="md:col-span-2 rounded-xl overflow-hidden border" style="border-color:var(--ln)">
