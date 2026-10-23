@@ -13,7 +13,15 @@ body{background:var(--bg);color:var(--mu);font-family:var(--f);font-size:16px;fo
 h1,h2,h3,.fd{font-family:var(--f);color:var(--tx);font-weight:500!important;letter-spacing:-.015em;line-height:1.18}
 h1,h1.fd{font-weight:500!important;letter-spacing:-.03em;line-height:1.08}
 p.fd,span.fd{font-weight:700!important;letter-spacing:-.01em}
-header a.fd{font-weight:500!important;letter-spacing:.01em}
+
+/* Brand Heading (Estates Artha) - Larger & Bold */
+header a.fd, .brand-logo{
+  font-weight:700!important;
+  font-size:clamp(1.85rem, 2.4vw, 2.45rem)!important;
+  letter-spacing:-.02em!important;
+  line-height:1!important;
+}
+
 .mu{color:var(--mu)}.gold{color:var(--gt)}
 .nl{color:var(--mu);font-weight:500!important;letter-spacing:.015em;transition:color .2s}.nl:hover{color:var(--gt)}
 label.l{display:block;font-size:.76rem;font-weight:500;letter-spacing:.02em;color:var(--mu);margin:0 0 .2rem}
